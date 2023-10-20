@@ -7,5 +7,10 @@ const DOMSelectors = {
 DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
     console.log(DOMSelectors.smth.value);
-    DOMSelectors.h2s.forEach((el)=> el.textContent = DOMSelectors.smth.value);
+    DOMSelectors.h2s.forEach((el)=> el.textContent = DOMSelectors.smth);
 });
+
+//makealbum
+//add card
+//
+//adddeletecard functionthng
