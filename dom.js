@@ -1,27 +1,46 @@
-
-
 const DOMSelectors = {
     form: document.querySelector("#formm"),
     h2s: document.querySelectorAll("h2"),
     picture: document.querySelectorAll(".pic"),
-    ent: document.querySelector(".ent"),
+    ent: document.querySelector(".entertain"),
+    creator: document.querySelector(".enterFavCreator"),
 };
 
-//make album: create an object and call the following functions
+
 DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
-    console.log(DOMSelectors.ent.value);
-    //DOMSelectors.h2s.forEach((el)=> el.textContent = DOMSelectors.something.value);
-    //DOMSelectors.picture.forEach((el)=> el.textContent = DOMSelectors.image.value);
+    DOMSelectors.h2s.forEach((el)=> el.textContent = DOMSelectors.h2s.value);
+    DOMSelectors.creator.textContent = DOMSelectors.creator.value;
 
 });
 
+//make album: create an object and call the following functions
+function makeCard(title, creator, imageURL){
+    return{
+        title: title,
+        creator: creator,
+        image: imageURL,
+    };
+}
+
 //add card
-DOMSelectors.form.addEventListener("", function(){
-    
-})
+function addCard(card){
+    const cardHTML=
+    `<div class="container>
+        <h2 class="titleOfEnt"> ${card.title}</h2>
+        <h3 class="creatorOfEnt">${card.creator}</h3>
+        <img class="pic" src="${card.imageURL} alt="entertainCover">
+        <button class="delete-button"> Delete </button>
+    </div>
+    `
+    DOMSelectors.form.insertAdjacentHTML("beforeend", cardHTML);
+}
 
 //clearfields
+function clearFields(){
+    DOMSelectors.ent.value= "",
+    DOMSelectors.picture.value=""
+}
 
 
 //add delete button
