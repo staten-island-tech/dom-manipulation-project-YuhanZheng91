@@ -1,25 +1,28 @@
+
+
 const DOMSelectors = {
     form: document.querySelector("#formm"),
     h2s: document.querySelectorAll("h2"),
-    picture: document.querySelector(".pic"),
-    something: document.querySelector(".smth"),
+    picture: document.querySelectorAll(".pic"),
+    ent: document.querySelector(".ent"),
 };
 
-//make album
+//make album: create an object and call the following functions
 DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
-    console.log(DOMSelectors.something.value)
-    DOMSelectors.h2s.forEach((el)=> el.textContent = DOMSelectors.something.value);
+    console.log(DOMSelectors.ent.value);
+    //DOMSelectors.h2s.forEach((el)=> el.textContent = DOMSelectors.something.value);
     //DOMSelectors.picture.forEach((el)=> el.textContent = DOMSelectors.image.value);
+
 });
 
 //add card
-DOMSelectors.form.addEventListener("asdjksfshfkj", function(event){
-    event.preventDefault();
-});
+DOMSelectors.form.addEventListener("", function(){
+    
+})
 
-//clearflieds
-//DOMSelectors.form.addEventListener();
+//clearfields
+
 
 //add delete button
 //DOMSelectors.form.addEventListener();
@@ -29,3 +32,5 @@ DOMSelectors.form.addEventListener("asdjksfshfkj", function(event){
 //add card: insertadjcenthtml
 //clearFields() -- make x === ""
 //adddeletecard functionthing queryselectortoallandaddevent ;foreach loop
+
+//no need to use create element
