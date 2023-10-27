@@ -1,8 +1,4 @@
 //restarted:
-document.body.style.backgroundColor = "#fad6a5";
-document.form.style.color ="#a0785a";
-document.getElementById("h2").style.color = "#a0785a";
-
 const DOMSelectors = {
     form: document.querySelector("#formm"),
     ent: document.querySelector(".entertain"),
@@ -12,21 +8,14 @@ const DOMSelectors = {
 //object and calls following functions
 DOMSelectors.form.addEventListener("submit", function(event) {
     event.preventDefault();
-
-    // Get input values
     const title = DOMSelectors.ent.value;
     const creator = DOMSelectors.creator.value;
     
-    // Create an album object
+    //create an album object
     const card = makeCard(title, creator, ""); 
-
-    // Add the album card to the DOM
-    addCard(card);
-
-    // Clear input fields
-    clearFields();
-
-    // Delete buttons
+    addCard(card);    //add the album card
+    clearFields();    //clear input fields
+    clickDelete();    //include delete buttons
 
 });
 
@@ -61,5 +50,9 @@ function clearFields() {
 
 //removes an object
 function clickDelete(){
-
+    const button = document.querySelectorAll("button");
+    button.forEach((button)=> button.addEventListener('click', function(event){
+        console.log(event.target.parentElement);
+    })
+    );
 }
