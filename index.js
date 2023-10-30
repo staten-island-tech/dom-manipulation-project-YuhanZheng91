@@ -55,4 +55,9 @@ function clickDelete(){
         console.log(event.target.parentElement);
     })
     );
+    button.forEach((button)=>
+    button.addEventListener('click', function (){
+        const deleteDelete = this.parentElement;
+        deleteDelete.remove();
+    }))
 }
