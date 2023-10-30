@@ -31,7 +31,7 @@ function makeCard(title, creator, imageURL) {
 //add card
 function addCard(card) {
     const cardHTML = `
-        <div class="container">
+        <div class="card">
             <h2 class="titleOfEnt">${card.title}</h2>
             <h2 class="creatorOfEnt">${card.creator}</h2>
             <img class="pic" src="${card.imageURL}" alt="image">

@@ -42,11 +42,6 @@ function clearFields(){
     DOMSelectors.picture.value=""
 }
 
-
-//add delete button
-//DOMSelectors.form.addEventListener();
-
-
 //makealbum
 //add card: insertadjcenthtml
 //clearFields() -- make x === ""
