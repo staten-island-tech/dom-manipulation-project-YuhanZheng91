@@ -3,6 +3,7 @@ const DOMSelectors = {
     form: document.querySelector("#formm"),
     ent: document.querySelector(".entertain"),
     creator: document.querySelector(".enterFavCreator"),
+    image: document.querySelector(".pic"),
 };
 
 //object and calls following functions
@@ -38,7 +39,6 @@ function addCard(card) {
             <button class="delete-button">Delete</button>
         </div>
     `;
-
     DOMSelectors.form.insertAdjacentHTML("afterend", cardHTML);
 }
 
@@ -55,6 +55,7 @@ function clickDelete(){
         console.log(event.target.parentElement);
     })
     );
+
     button.forEach((button)=>
     button.addEventListener('click', function (){
         const deleteDelete = this.parentElement;
