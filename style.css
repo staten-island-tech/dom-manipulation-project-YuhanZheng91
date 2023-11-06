@@ -22,16 +22,30 @@ h2{
     font-weight: lighter;
 }
 
+.titleOfEnt{
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+    margin: 0;
+}
+
+.creatorOfEnt{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2% 5% 4%;
+    font-style: italic;
+}
+
 .card{
     margin: 2.5%;
     padding: 2% 6%;
-    border-radius: 4%;
     box-shadow: 5px 3px #daaf9d;
     background-color: #edc9af;
     align-items: center;
     text-align: center;
     display: grid;
     justify-items: center;
+    text-wrap: wrap;
 }
 
 .delete-button{

@@ -17,7 +17,6 @@ DOMSelectors.form.addEventListener("submit", function(event) {
     addCard(card);    //add the album card
     clearFields();    //clear input fields
     clickDelete();    //include delete buttons
-
 });
 
 //make cards
@@ -33,10 +32,10 @@ function makeCard(title, creator, imageURL) {
 function addCard(card) {
     const cardHTML = `
         <div class="card">
-            <h2 class="titleOfEnt">${card.title}</h2>
-            <h2 class="creatorOfEnt">${card.creator}</h2>
+            <h2 class="titleOfEnt"> ${card.title} </h2>
+            <h2 class="creatorOfEnt"> ${card.creator} </h2>
             <img class="pic" src="${card.imageURL}" alt="image">
-            <button class="delete-button">Delete</button>
+            <button class="delete-button"> Delete </button>
         </div>
     `;
     DOMSelectors.form.insertAdjacentHTML("afterend", cardHTML);
